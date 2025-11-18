@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тест уровня знаний | Школьный опросник</title>
-    <meta name="description" content="Бесплатный тест для определения уровня знаний школьников по основным предметам">
+    <title>Тест по финансовой грамотности | Проверь свои знания</title>
+    <meta name="description" content="Бесплатный тест для оценки уровня финансовой грамотности и получения персональных рекомендаций">
     <style>
         :root {
-            --primary: #4361ee;
-            --secondary: #3a0ca3;
-            --success: #4cc9f0;
+            --primary: #2E8B57;
+            --secondary: #228B22;
+            --success: #32CD32;
             --light: #f8f9fa;
             --dark: #212529;
             --danger: #e63946;
-            --warning: #fca311;
+            --warning: #FFA500;
             --border-radius: 10px;
             --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
@@ -27,7 +27,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2E8B57 0%, #228B22 100%);
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
@@ -113,7 +113,7 @@
         input:focus, select:focus {
             border-color: var(--primary);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+            box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
         }
         
         .question {
@@ -150,11 +150,11 @@
         
         .option:hover {
             border-color: var(--primary);
-            background: #f8f9ff;
+            background: #f0fff0;
         }
         
         .option.selected {
-            background: #e8f0fe;
+            background: #e8f5e8;
             border-color: var(--primary);
         }
         
@@ -282,7 +282,7 @@
         }
         
         .restart-btn:hover {
-            background: #3aa8d5;
+            background: #28a428;
         }
         
         footer {
@@ -295,8 +295,8 @@
         }
         
         .info-box {
-            background: #e8f4ff;
-            border: 1px solid #b8daff;
+            background: #e8f5e8;
+            border: 1px solid #b8e0b8;
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 20px;
@@ -333,8 +333,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>Школьный тест знаний</h1>
-            <p class="subtitle">Определите свой уровень по основным предметам и получите персональные рекомендации</p>
+            <h1>Тест по финансовой грамотности</h1>
+            <p class="subtitle">Проверьте свои знания в области финансов и получите персональные рекомендации</p>
         </header>
         
         <div class="card">
@@ -350,25 +350,23 @@
             
             <div class="step active" id="step1">
                 <div class="info-box">
-                    <p>📚 Этот тест поможет определить ваш текущий уровень знаний по основным школьным предметам. Ответьте честно на все вопросы для получения точного результата.</p>
+                    <p>💰 Этот тест поможет оценить ваш уровень финансовой грамотности. Ответьте честно на все вопросы для получения точного результата и полезных рекомендаций.</p>
                 </div>
                 
-                <h2>Информация об ученике</h2>
+                <h2>Информация о себе</h2>
                 <div class="form-group">
                     <label for="name">Имя:</label>
                     <input type="text" id="name" placeholder="Введите ваше имя">
                 </div>
                 <div class="form-group">
-                    <label for="grade">Класс:</label>
-                    <select id="grade">
-                        <option value="">Выберите класс</option>
-                        <option value="5">5 класс</option>
-                        <option value="6">6 класс</option>
-                        <option value="7">7 класс</option>
-                        <option value="8">8 класс</option>
-                        <option value="9">9 класс</option>
-                        <option value="10">10 класс</option>
-                        <option value="11">11 класс</option>
+                    <label for="age">Возрастная группа:</label>
+                    <select id="age">
+                        <option value="">Выберите возраст</option>
+                        <option value="teen">До 18 лет</option>
+                        <option value="young">18-25 лет</option>
+                        <option value="adult">26-40 лет</option>
+                        <option value="middle">41-60 лет</option>
+                        <option value="senior">Старше 60 лет</option>
                     </select>
                 </div>
                 <div class="btn-container">
@@ -377,40 +375,58 @@
             </div>
             
             <div class="step" id="step2">
-                <h2><span class="subject-icon">➗</span> Математика</h2>
+                <h2><span class="subject-icon">💰</span> Основы финансов</h2>
                 
                 <div class="question">
-                    <div class="question-text">1. Решите уравнение: 2x + 5 = 15</div>
+                    <div class="question-text">1. Что такое инфляция?</div>
                     <div class="options">
                         <label class="option">
-                            <input type="radio" name="math1" value="a"> x = 5
+                            <input type="radio" name="q1" value="a"> Увеличение стоимости ценных бумаг
                         </label>
                         <label class="option">
-                            <input type="radio" name="math1" value="b"> x = 10
+                            <input type="radio" name="q1" value="b"> Повышение общего уровня цен на товары и услуги
                         </label>
                         <label class="option">
-                            <input type="radio" name="math1" value="c"> x = 7.5
+                            <input type="radio" name="q1" value="c"> Увеличение заработной платы
                         </label>
                         <label class="option">
-                            <input type="radio" name="math1" value="d"> x = 20
+                            <input type="radio" name="q1" value="d"> Снижение курса национальной валюты
                         </label>
                     </div>
                 </div>
                 
                 <div class="question">
-                    <div class="question-text">2. Найдите площадь прямоугольника со сторонами 8 см и 5 см</div>
+                    <div class="question-text">2. Что такое подоходный налог?</div>
                     <div class="options">
                         <label class="option">
-                            <input type="radio" name="math2" value="a"> 13 см²
+                            <input type="radio" name="q2" value="a"> Налог на покупку товаров и услуг
                         </label>
                         <label class="option">
-                            <input type="radio" name="math2" value="b"> 40 см²
+                            <input type="radio" name="q2" value="b"> Налог на доходы физических лиц
                         </label>
                         <label class="option">
-                            <input type="radio" name="math2" value="c"> 26 см²
+                            <input type="radio" name="q2" value="c"> Налог на недвижимость
                         </label>
                         <label class="option">
-                            <input type="radio" name="math2" value="d"> 45 см²
+                            <input type="radio" name="q2" value="d"> Налог на транспортные средства
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <div class="question-text">3. Что такое кредитная история?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q3" value="a"> История покупок в кредит
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="b"> Информация о выполнении обязательств по кредитам
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="c"> Список всех взятых кредитов
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="d"> История работы кредитных организаций
                         </label>
                     </div>
                 </div>
@@ -422,40 +438,58 @@
             </div>
             
             <div class="step" id="step3">
-                <h2><span class="subject-icon">📖</span> Русский язык</h2>
+                <h2><span class="subject-icon">🏦</span> Банковские продукты</h2>
                 
                 <div class="question">
-                    <div class="question-text">3. В каком слове пишется буква "и" после "ц"?</div>
+                    <div class="question-text">4. Что такое депозит?</div>
                     <div class="options">
                         <label class="option">
-                            <input type="radio" name="russian1" value="a"> ц...рк
+                            <input type="radio" name="q4" value="a"> Вид кредита
                         </label>
                         <label class="option">
-                            <input type="radio" name="russian1" value="b"> ц...фра
+                            <input type="radio" name="q4" value="b"> Вклад денежных средств в банк под проценты
                         </label>
                         <label class="option">
-                            <input type="radio" name="russian1" value="c"> ц...ган
+                            <input type="radio" name="q4" value="c"> Платежная карта
                         </label>
                         <label class="option">
-                            <input type="radio" name="russian1" value="d"> ц...пленок
+                            <input type="radio" name="q4" value="d"> Страховой полис
                         </label>
                     </div>
                 </div>
                 
                 <div class="question">
-                    <div class="question-text">4. Укажите предложение с грамматической ошибкой</div>
+                    <div class="question-text">5. Что означает понятие "овердрафт"?</div>
                     <div class="options">
                         <label class="option">
-                            <input type="radio" name="russian2" value="a"> Обе подруги выглядели уставшими.
+                            <input type="radio" name="q5" value="a"> Превышение расходов над доходами
                         </label>
                         <label class="option">
-                            <input type="radio" name="russian2" value="b"> Пять студентов сдали экзамен досрочно.
+                            <input type="radio" name="q5" value="b"> Краткосрочный кредит на небольшую сумму
                         </label>
                         <label class="option">
-                            <input type="radio" name="russian2" value="c"> Трое девушек вышли на сцену.
+                            <input type="radio" name="q5" value="c"> Возможность оплаты при отсутствии средств на счете
                         </label>
                         <label class="option">
-                            <input type="radio" name="russian2" value="d"> Обоих сестер пригласили на праздник.
+                            <input type="radio" name="q5" value="d"> Все варианты верны
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <div class="question-text">6. Что такое ипотека?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q6" value="a"> Кредит на образование
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="b"> Кредит на покупку недвижимости под залог этой недвижимости
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="c"> Кредит на автомобиль
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="d"> Потребительский кредит
                         </label>
                     </div>
                 </div>
@@ -467,40 +501,76 @@
             </div>
             
             <div class="step" id="step4">
-                <h2><span class="subject-icon">🔤</span> Английский язык</h2>
+                <h2><span class="subject-icon">📈</span> Инвестиции и сбережения</h2>
                 
                 <div class="question">
-                    <div class="question-text">5. Choose the correct form: She _____ to school every day.</div>
+                    <div class="question-text">7. Что такое диверсификация?</div>
                     <div class="options">
                         <label class="option">
-                            <input type="radio" name="english1" value="a"> go
+                            <input type="radio" name="q7" value="a"> Увеличение доходности инвестиций
                         </label>
                         <label class="option">
-                            <input type="radio" name="english1" value="b"> goes
+                            <input type="radio" name="q7" value="b"> Распределение инвестиций по разным активам для снижения рисков
                         </label>
                         <label class="option">
-                            <input type="radio" name="english1" value="c"> is going
+                            <input type="radio" name="q7" value="c"> Концентрация инвестиций в одном активе
                         </label>
                         <label class="option">
-                            <input type="radio" name="english1" value="d"> went
+                            <input type="radio" name="q7" value="d"> Продажа всех активов
                         </label>
                     </div>
                 </div>
                 
                 <div class="question">
-                    <div class="question-text">6. Which word is the opposite of "expensive"?</div>
+                    <div class="question-text">8. Что такое "финансовая подушка безопасности"?</div>
                     <div class="options">
                         <label class="option">
-                            <input type="radio" name="english2" value="a"> cheap
+                            <input type="radio" name="q8" value="a"> Деньги на развлечения
                         </label>
                         <label class="option">
-                            <input type="radio" name="english2" value="b"> valuable
+                            <input type="radio" name="q8" value="b"> Сбережения на крупную покупку
                         </label>
                         <label class="option">
-                            <input type="radio" name="english2" value="c"> costly
+                            <input type="radio" name="q8" value="c"> Резерв средств на непредвиденные расходы
                         </label>
                         <label class="option">
-                            <input type="radio" name="english2" value="d"> pricey
+                            <input type="radio" name="q8" value="d"> Деньги на инвестиции
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <div class="question-text">9. Что такое пассивный доход?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q9" value="a"> Доход от работы по найму
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="b"> Доход от бизнеса
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="c"> Доход, не требующий постоянных активных действий
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="d"> Доход от подработки
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <div class="question-text">10. Что такое сложный процент?</div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q10" value="a"> Процент, начисляемый только на первоначальную сумму
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="b"> Высокий процент по вкладу
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="c"> Процент, начисляемый на сумму с ранее начисленными процентами
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="d"> Процент по кредиту
                         </label>
                     </div>
                 </div>
@@ -520,7 +590,7 @@
                     <div class="description" id="level-description"></div>
                     
                     <div class="recommendations">
-                        <h3>Рекомендации для улучшения:</h3>
+                        <h3>Рекомендации для улучшения финансовой грамотности:</h3>
                         <ul id="recommendations-list"></ul>
                     </div>
                     
@@ -530,54 +600,58 @@
         </div>
         
         <footer>
-            <p>© 2023 Школьный тест знаний. Бесплатный онлайн-опросник для учащихся.</p>
+            <p>© 2023 Тест по финансовой грамотности. Бесплатный онлайн-опросник.</p>
         </footer>
     </div>
 
     <script>
         // Правильные ответы
         const correctAnswers = {
-            math1: 'a',
-            math2: 'b',
-            russian1: 'c',
-            russian2: 'd',
-            english1: 'b',
-            english2: 'a'
+            q1: 'b',
+            q2: 'b',
+            q3: 'b',
+            q4: 'b',
+            q5: 'd',
+            q6: 'b',
+            q7: 'b',
+            q8: 'c',
+            q9: 'c',
+            q10: 'c'
         };
         
         // Описания уровней
         const levelDescriptions = {
             beginner: {
                 name: "Начальный уровень",
-                description: "Вам нужно больше практики по основным темам. Рекомендуем обратить внимание на базовые понятия и регулярно заниматься.",
+                description: "У вас есть базовые представления о финансах, но много важных аспектов требуют изучения. Рекомендуем уделить время финансовому образованию.",
                 recommendations: [
-                    "Регулярно повторяйте пройденный материал",
-                    "Выполняйте дополнительные упражнения из учебника",
-                    "Обратитесь к учителю для индивидуальной консультации",
-                    "Используйте онлайн-ресурсы для самостоятельного изучения",
-                    "Составьте план занятий и следуйте ему"
+                    "Изучите основы финансовой грамотности: бюджет, сбережения, кредиты",
+                    "Начните вести личный бюджет и отслеживать расходы",
+                    "Создайте финансовую подушку безопасности на 3-6 месяцев",
+                    "Изучите информацию о банковских продуктах перед их использованием",
+                    "Читайте книги и статьи по финансовой грамотности"
                 ]
             },
             intermediate: {
                 name: "Средний уровень",
-                description: "У вас хорошие базовые знания, но есть области, которые требуют улучшения. Продолжайте развиваться!",
+                description: "У вас хорошие базовые знания в области финансов, но есть темы, которые требуют углубленного изучения.",
                 recommendations: [
-                    "Сосредоточьтесь на темах, где допустили ошибки",
-                    "Практикуйтесь в решении более сложных задач",
-                    "Читайте дополнительную литературу по предмету",
-                    "Участвуйте в школьных олимпиадах и конкурсах",
-                    "Обсуждайте сложные темы с учителем и одноклассниками"
+                    "Углубите знания в области инвестирования и налогов",
+                    "Рассмотрите возможности для создания пассивного дохода",
+                    "Оптимизируйте свою кредитную нагрузку",
+                    "Изучите возможности долгосрочного финансового планирования",
+                    "Рассмотрите различные инструменты сбережений и инвестиций"
                 ]
             },
             advanced: {
                 name: "Продвинутый уровень",
-                description: "Поздравляем! У вас отличные знания по основным предметам. Продолжайте углублять свои знания.",
+                description: "Поздравляем! У вас отличные знания в области финансов. Вы понимаете основные финансовые концепции и инструменты.",
                 recommendations: [
-                    "Продолжайте углублять знания в интересующих областях",
-                    "Участвуйте в научных проектах и исследованиях",
-                    "Помогайте одноклассникам в учебе",
-                    "Рассмотрите возможность участия в профильных олимпиадах",
-                    "Изучайте дополнительные материалы за пределами школьной программы"
+                    "Продолжайте углублять знания в специализированных областях финансов",
+                    "Рассмотрите возможности для диверсификации инвестиционного портфеля",
+                    "Изучите налоговые оптимизации для вашего уровня доходов",
+                    "Помогайте близким повышать их финансовую грамотность",
+                    "Следите за изменениями в финансовом законодательстве"
                 ]
             }
         };
@@ -599,9 +673,9 @@
             // Проверка заполнения текущего шага
             if (currentStep === 1) {
                 const name = document.getElementById('name').value;
-                const grade = document.getElementById('grade').value;
+                const age = document.getElementById('age').value;
                 
-                if (!name || !grade) {
+                if (!name || !age) {
                     alert('Пожалуйста, заполните все поля');
                     return;
                 }
@@ -653,10 +727,17 @@
         
         // Функция показа результатов
         function showResults() {
-            // Сбор информации об ученике
+            // Сбор информации о пользователе
             const name = document.getElementById('name').value;
-            const grade = document.getElementById('grade').value;
-            document.getElementById('student-info').textContent = `${name}, ${grade} класс`;
+            const age = document.getElementById('age').value;
+            const ageLabels = {
+                'teen': 'До 18 лет',
+                'young': '18-25 лет',
+                'adult': '26-40 лет',
+                'middle': '41-60 лет',
+                'senior': 'Старше 60 лет'
+            };
+            document.getElementById('student-info').textContent = `${name}, ${ageLabels[age]}`;
             
             // Подсчет правильных ответов
             let score = 0;
@@ -671,9 +752,9 @@
             
             // Определение уровня
             let level;
-            if (score <= 2) {
+            if (score <= 4) {
                 level = 'beginner';
-            } else if (score <= 4) {
+            } else if (score <= 7) {
                 level = 'intermediate';
             } else {
                 level = 'advanced';
@@ -697,7 +778,7 @@
         function restartTest() {
             // Сброс формы
             document.getElementById('name').value = '';
-            document.getElementById('grade').value = '';
+            document.getElementById('age').value = '';
             
             // Сброс выбранных ответов
             const allInputs = document.querySelectorAll('input[type="radio"]');
